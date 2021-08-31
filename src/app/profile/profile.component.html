@@ -1,0 +1,72 @@
+<div class="login-wrapper">
+  <div class="card">
+    <div class="card-body">
+      <form class="form-login">
+        <h1 class="h3 mb-3 fw-normal">Please log in</h1>
+
+        <label for="floatingInput">User Name</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="user_login.name"
+          name="name"
+          placeholder="User name"
+          required
+          #u1
+        />
+
+        <label for="floatingInput">Birthday</label>
+        <input
+          type="date"
+          class="form-control"
+          [(ngModel)]="user_login.date"
+          name="date"
+          required
+          #b1
+        />
+
+        <label for="floatingInput">Age</label>
+        <input
+          type="number"
+          class="form-control"
+          [(ngModel)]="user_login.age"
+          name="age"
+          placeholder="Enter Age"
+          required
+          #a1
+        />
+
+        <label for="floatingInput">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          [(ngModel)]="user_login.email"
+          name="email"
+          placeholder="email address"
+          required
+          #e1
+        />
+
+        <label for="floatingPassword">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          [(ngModel)]="user_login.password"
+          name="password"
+          placeholder="Password"
+          required
+          #p1
+        />
+
+        <button class="w-100 btn btn-lg btn-primary" (click)="LogIn()">
+          log in
+        </button>
+        <br />
+        <!-- <span>{{ msg }}</span> -->
+      </form>
+    </div>
+  </div>
+</div>
+<div class="continer">
+  <router-outlet></router-outlet>
+</div>
